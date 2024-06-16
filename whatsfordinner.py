@@ -2,6 +2,7 @@ import pickle
 from typing import List, Dict, Any
 from dataclasses import dataclass
 import random
+import gzip
 
 
 @dataclass
@@ -65,7 +66,7 @@ def decide(recipe: Recipe):
 
 
 if __name__ == "__main__":
-    with open("processed.bin", "rb") as f:
+    with gzip.open("processed.bin.gz", "rb") as f:
         data = pickle.load(f)
         choice = random.choice(data)
         decide(choice)
