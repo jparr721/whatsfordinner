@@ -62,7 +62,7 @@ def decide(recipe: Recipe):
             print("This one won't work :(")
             return
     else:
-        print("LETS FUCKING GOOOOO")
+        print("good")
 
 
 if __name__ == "__main__":
